@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b5f7232e"
+    tools:context=".OrderActivity">
+
+    <TextView
+        android:id="@+id/textpiza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trademark"
+        android:gravity="center"
+        android:text="Pizza Hosa"
+        android:textColor="#c50b0b0b"
+        android:textSize="50dp" />
+
+
+    <Button
+        android:id="@+id/btnreview"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textpiza"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/type_button"
+        android:text="MENU" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/btnreview"
+        android:background="@drawable/style_page_order">
+
+        <Spinner
+            android:id="@+id/spinner1"
+            style="@style/stylespenner"
+            android:layout_alignParentTop="true"
+             />
+
+        <Button
+            android:id="@+id/btnmoinspiza"
+            style="@style/buttonorder"
+            android:layout_toRightOf="@id/spinner1"
+            android:text="-"
+            android:onClick="decrement"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/editetxtpiza"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="38dp"
+            android:layout_toRightOf="@id/btnmoinspiza"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnpluspiza"
+            style="@style/buttonorder"
+            android:layout_toRightOf="@id/editetxtpiza"
+            android:text="+"
+            android:onClick="increment"/>
+
+        <TextView
+            android:id="@+id/txttotalpiza"
+            style="@style/stayletexttotal"
+            android:layout_toRightOf="@id/btnpluspiza"
+            android:text="  00.00$" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/btnpluspiza"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:background="#102000" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            style="@style/stylespenner"
+            android:layout_below="@id/btnpluspiza"
+            />
+
+        <Button
+            android:id="@+id/btnmoins2"
+            style="@style/buttonorder"
+            android:layout_below="@id/btnpluspiza"
+            android:layout_toRightOf="@id/spinner2"
+            android:onClick="decrement2"
+            android:text="-"
+            tools:ignore="OnClick" />
+
+        <TextView
+            android:id="@+id/editetxtcafe"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/btnpluspiza"
+            android:layout_marginTop="38dp"
+            android:layout_toRightOf="@id/btnmoins2"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnplus2"
+            style="@style/buttonorder"
+            android:layout_below="@id/btnpluspiza"
+            android:layout_toRightOf="@id/editetxtcafe"
+            android:onClick="increment2"
+            android:text="+" />
+
+        <TextView
+            android:id="@+id/txttotalcafe"
+            style="@style/stayletexttotal"
+            android:layout_below="@id/btnpluspiza"
+            android:layout_toRightOf="@id/btnplus2"
+            android:text="  00.00$" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:layout_below="@id/btnplus2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:background="#2d302f" />
+
+        <TextView
+            android:id="@+id/txttax"
+            style="@style/stayltexttax2"
+            android:layout_below="@id/btnplus2"
+            android:layout_marginTop="44dp"
+            android:text="Tax :" />
+
+        <TextView
+            android:id="@+id/txtnumbrtax"
+            style="@style/stayltexttax"
+            android:layout_below="@id/btnplus2"
+            android:layout_marginTop="44dp"
+            android:text="20%" />
+
+        <TextView
+            android:id="@+id/txtdelivery"
+            style="@style/stayltexttax2"
+            android:layout_below="@id/txttax"
+            android:text="Prix Of Delivery :" />
+
+        <TextView
+            android:id="@+id/txtnumberdelivery"
+            style="@style/stayltexttax"
+            android:layout_below="@id/txtnumbrtax"
+            android:text="$4.00" />
+
+        <TextView
+            android:id="@+id/txttotal"
+            style="@style/stayltexttax2"
+            android:layout_below="@id/txtdelivery"
+            android:text="TOTAL :" />
+
+        <TextView
+            android:id="@+id/txttotalorder"
+            style="@style/stayltexttax"
+            android:layout_below="@id/txtnumberdelivery"
+            android:text="$00.00" />
+
+        <Button
+            android:id="@+id/btnclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="18dp"
+            android:background="@drawable/styl_button_clear"
+            android:text="Clear"
+            android:onClick="clear"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btnorder"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/style_button_order"
+            android:text="Order Now"
+            android:onClick="order"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

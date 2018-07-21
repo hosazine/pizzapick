@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">pizaa pick</string>
+    <string name="pizza_prompt">Choose pizza</string>
+    <string-array name="pizza_arrays">
+        <item>Margareta:88.00$</item>
+        <item>Honday   :110.00$</item>
+        <item>Nomansia:75.00$</item>
+    </string-array>
+    <string-array name="caffe_array">
+        <item>Coca:10.00$</item>
+        <item>Pepsi:12.00$</item>
+        <item>Cafe:7.00$</item>
+    </string-array>
+</resources>
